@@ -25,6 +25,7 @@ resource "vultr_instance" "miner" {
   os_id                  = var.ubuntu_jammy
   region                 = var.vultr_dallas
   plan                   = var.one_cpu_one_gb_ram
+  ssh_key_ids            = var.vultr_ssh_keys
 }
 
 

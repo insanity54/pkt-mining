@@ -18,3 +18,8 @@ variable "instance_count" {
   description = "The number of miner instances to spin-up"
   default = 1
 }
+
+variable "vultr_ssh_keys" {
+  type        = list(string)
+  description = "Vultr key ID of the SSH keys to add to the server. ID is retrieved from https://my.vultr.com/settings/#settingssshkeys"
+}

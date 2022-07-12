@@ -2,4 +2,6 @@
 ansible_user: root
 packetcrypt_version: v0.5.2
 packetcrypt_paymentaddr: pkt1q4f3x0h5h9zzvhf27r9d0fwhvxplc7y0r26rden
-instance_count: 1
+vultr_ssh_keys: 
+  - "3de433bf-06e3-448e-8692-6fc3094b2829"
+instance_count: 3

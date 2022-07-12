@@ -10,6 +10,8 @@
         state: present
         variables:
           instance_count: "{{ instance_count }}"
+          vultr_ssh_keys: "{{ vultr_ssh_keys | list | to_json }}"
+            
     - meta: refresh_inventory
 
 
@@ -18,6 +20,8 @@
 # It requires that we do not gather_facts.
 - name: Install base
   hosts: miners
+  vars_files: 
+    - vars/main.yml
   gather_facts: no
   roles:
     - role: insanity54.base
