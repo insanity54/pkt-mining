@@ -1,0 +1,5 @@
+---
+ansible_user: root
+packetcrypt_version: v0.5.2
+packetcrypt_paymentaddr: pkt1q4f3x0h5h9zzvhf27r9d0fwhvxplc7y0r26rden
+instance_count: 1
