@@ -11,7 +11,7 @@ A terraform & ansible thingy to set up PKT miner(s) on [Vultr](https://www.vultr
 
 ### Usage
 
-Edit `./vars/main.yml` to set your PKT wallet address and desired number of cloud instances.
+Edit `./vars/main.yml` to set your [Vultr SSH key(s)](https://my.vultr.com/settings/#settingssshkeys), PKT wallet address, and desired number of cloud instances.
 
 Install dependency roles via ansible galaxy. These roles include [insanity54.base](https://galaxy.ansible.com/insanity54/base) and [insanity54.pkt](https://galaxy.ansible.com/insanity54/pkt).
 
