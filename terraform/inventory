@@ -1,5 +1,0 @@
-# Terraform uses this template to
-# create an inventory file that Ansible can use.
-
-[miners]
-155.138.252.103

@@ -1,11 +1,11 @@
 ---
 
-- hosts: localhost
+- name: Spin up miners
+  hosts: localhost
   vars_files: 
     - vars/main.yml
   tasks:
-    - name: Spin up miners on Vultr
-      community.general.terraform:
+    - community.general.terraform:
         project_path: ./terraform
         state: present
         variables:
@@ -16,12 +16,14 @@
 # The insanity54.base role sets up the VPS
 # for working with Ansible.
 # It requires that we do not gather_facts.
-- hosts: miners
+- name: Install base
+  hosts: miners
   gather_facts: no
   roles:
     - role: insanity54.base
 
-- hosts: miners
+- name: Install pkt
+  hosts: miners
   vars_files: 
     - vars/main.yml
   roles:

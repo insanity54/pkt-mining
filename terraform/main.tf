@@ -35,5 +35,5 @@ resource "local_file" "AnsibleInventory" {
   content = templatefile("${path.root}/templates/inventory.tmpl", {
     miners = vultr_instance.miner
   })
-  filename = "inventory"
+  filename = "../hosts"
 }
